@@ -14,7 +14,7 @@ const app = express();
 
 app.use(cors({
     credentials: true, 
-    origin: 'https://rentwheel-ecyw.onrender.com/', 
+    origin: 'https://rentwheel-ecyw.onrender.com', 
 }));
 
 // Configuring ENV files and connection files
