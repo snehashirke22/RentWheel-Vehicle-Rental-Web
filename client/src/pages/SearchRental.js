@@ -16,7 +16,7 @@ const SearchRental = () => {
 
   //fetching data 
   //const { data, loading } = useFetch(`http://localhost:8000/server/vehicles?vehicleType=${searchData.vehicleType}&pickupDate=${searchData.pickupDate}&dropOffDate=${searchData.dropOffDate}`);
-  const { data, loading } = useFetch(`http://localhost:8000/server/vehicles?vehicleType=${searchData.vehicleType}`);
+  const { data, loading } = useFetch(`https://vehicle-rental-web.onrender.com/vehicles?vehicleType=${searchData.vehicleType}`);
   console.log(data);
 
   //State variables for edit search toggle
