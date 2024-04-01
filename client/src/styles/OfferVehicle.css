@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+.offer-content{
+    margin: 0 auto;
+    max-width: 70%;
+    margin-top: 7%;
+    text-align: center;
+}
+
+.offer-container{
+  background: linear-gradient(0deg, rgba(128,199,241,1) 16%, rgba(206,229,237,1) 100%);
+ 
+    max-width: 50%;
+    padding: 2%;
+    margin: 0 auto;
+    margin-top: 3%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  justify-content: space-between;
+}
+.offer-container form {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+.offer-input-box{
+    margin-right: 20px;
+    margin-top: 4%;
+    width: 30%;
+}
+.offer-input-box:last-child {
+    margin-right: 0; 
+  }
+  
+  
+.offer-input-box input , select {
+    width: 100%;
+    height: 42px;
+    margin-top: 3%;
+    outline: none;
+    background-color: #ffffffef;
+  border: 1.5px solid #C7BEBE;
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+  
+.offer-input-box label {
+    margin-bottom: 2%;
+    font-size: 16px;
+    color: #000000;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+.offer-input-box select, 
+.offer-input-box input[type="Number"] {
+  width: 100%; 
+}
+.offer-input-box input:focus,
+.offer-input-box select:focus,
+.offer-input-box input:valid {
+  border-color: #4070f4;
+}
+
+.form-one h3{
+  color: #3f3f3f;
+}
+.form-two{
+    margin-top: 5%;
+}
+.form-two h3{
+    margin-top: 5%;
+    color: #3f3f3f;
+}
+.offer-input-box.button input {
+    color: #e9e9e9;
+    letter-spacing: 1px;
+    border: none;
+    background: #16425B;
+    cursor: pointer;
+    padding: 3%;
+    border-radius: 5%;
+    font-size: 18px;
+  font-weight: 600;
+  }
+  
+  .offer-input-box.button input:hover {
+    background: rgba(3, 27, 92, 0.832);
+  }
+
+  @media (max-width: 480px){
+    .offer-content{
+
+      max-width: 90%;
+      margin-top: 10%;
+      text-align: justify;
+  }
+    .offer-container{
+      margin-top: 10%;
+max-width: 100%;
+}
+.form-one{
+  margin-top: 10%;
+}
+.form-two{
+  margin-bottom: 10%;
+}
+.offer-input-box{
+margin-left: 4%;
+      width: 40%;
+    }
+    .offer-container h3{
+margin-left: 4%;
+    }
+  }

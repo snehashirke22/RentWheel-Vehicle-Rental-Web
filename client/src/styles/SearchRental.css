@@ -1,0 +1,308 @@
+.edit-option {
+  color: blue;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+
+.rental-search-container{
+    
+    background-color: rgb(254, 255, 255);
+    border-radius: 15px;
+    margin: -130px auto 50px;
+    margin-top: 100px;
+    padding: 5px;
+    position: relative; 
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;  
+    width:90%;
+   
+}
+
+.cancel-icon {
+    position: absolute;
+    top: 2px; 
+    right: 30px; 
+    cursor: pointer;
+  }
+  
+  .cancel-icon::after {
+    content: '×'; 
+    font-size: 30px;
+    color: rgb(2, 6, 31); 
+  }
+  
+  .rental-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rental-search label {
+    margin: 10px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+  }
+  .rental-label-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  .rental-search select, .rental-search input {
+    width: 250px;
+    padding: 10px;
+    margin: 20px;
+  background-color:transparent;
+  border: none; 
+  border-radius: 0; 
+  font-size: 16px;
+  border-bottom: 2px solid rgb(177, 172, 172); 
+  }
+  
+  .filter-container {
+    float: left;
+    width: 17%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    margin-left: 6.5%;
+    color: #3f3f3f;
+  
+  }
+  
+  .filter-option p {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .filter-item {
+    margin-bottom: 15px;
+  }
+  
+  .filter-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .filter-item input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .filter-option {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .clear-option {
+    cursor: pointer;
+    color: rgb(79, 79, 79); 
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .filter-button {
+    display: none;
+  }
+
+  
+  /* VehicleCard.css */
+  .total-count{
+    font-size: 20px;
+    color: #3d3d3d;
+    margin-left: 8px; 
+  }
+ 
+  .vehicle-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 7px;
+    color: #555; 
+  }
+.vehicle-card {
+  display: flex;
+  flex-direction: column;
+ 
+  border-radius: 7px;
+  padding: 20px;
+  margin: 5px;
+  width: 330px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.vehicle-photo {
+  width: 100%;
+  height: auto;
+  
+ 
+}
+
+.vehicle-info {
+  margin-left: 5px;
+  margin-top: 15px;
+  
+}
+
+
+.vehicle-model {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #282828;
+  font-weight: 600;
+  font-size: 20px;
+}
+.vehicle-variant{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.vehicle-features {
+  list-style: none;
+  margin-top: 2%;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.vehicle-features li {
+  margin-bottom: 5px;
+}
+
+.vehicle-details{
+  display: flex;
+  justify-content: space-between;
+}
+.vehicle-price {
+  margin-top: 15px;
+  color: #282828;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.view-button {
+  margin-top: 10px;
+  padding: 7px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #16425b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+.view-button:hover {
+  background-color: #16425bee;
+}
+
+
+
+@media (max-width: 480px){
+  .cancel-icon {
+    position: absolute;
+    top: -3px; 
+    right: 10px; 
+    cursor: pointer;
+  }
+  .rental-search-container{
+    margin: 20px auto 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .rental-search{
+    margin-top: 10px;
+    
+    
+  }
+.rental-search label {
+  margin: 10px;
+  font-size: 15px;
+}
+.rental-label-input-container {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.rental-search select, .rental-search input {
+  width: 150px;
+  padding: 8px;
+  margin: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid rgb(59, 59, 59); 
+ 
+}
+.rental-search button{
+  width: 200px;
+  margin-top: 8px;
+  padding: 10px;
+}
+.filter-container {
+  width: 70%;
+  margin: 0 auto;
+  float: none;
+  display: none;
+  position: absolute; 
+  top: 50%; 
+  left: 5%;
+  background-color: #ffffff; 
+  border: 1px solid #cccccc; 
+  padding: 10px; 
+  z-index: 1000; 
+  
+}
+.filter-item{
+  margin-left: 20px;
+}
+.filter-container.show {
+  display: block;
+}
+
+.filter-button-container {
+  display: flex;
+  align-items: center; 
+  position: relative; 
+  
+}
+/* filter section */
+.filter-button {
+  background-color:#fff;
+  border: 1px solid rgb(20, 19, 19);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 20px;
+  display: block;
+
+}
+.filter-option h2{
+  margin-top: 20px;
+  margin-left: 7%;
+}
+.total-count{
+  margin-left: 30px;
+  font-size: 18px;
+}
+.vehicle-container {
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 20px; 
+}
+.vehicle-card {
+  width: 80%; 
+}
+.vehicle-features{
+  font-size: 14px;
+}
+}

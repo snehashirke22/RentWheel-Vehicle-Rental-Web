@@ -1,0 +1,111 @@
+.contact-body{
+    margin-top: 10%;
+    margin-left: 10%;
+    display: flex;
+}
+.contact-head{
+    display: flex;
+    color: #3f3f3f;
+    margin-top: 2%;
+}
+
+.contact-head img{
+    width: 4%;
+    height: 5%;
+    margin-top: 5%;
+}
+.contact-info{
+    width: 100%;
+}
+.contact-info h3,p{
+    margin-left: 2%;
+}
+.contact-container{
+    display: flex;
+}
+.contact-right {
+    flex: 1;  
+  }
+.contact-left{
+    flex: 1;
+    margin-top: 3%;
+    max-width: 80%;
+    color: #3f3f3f;
+  }
+.contact-left h3{
+    font-size: 18px;
+    margin-top: 5%;
+    }
+.contact-left p{
+        width: 80%; 
+    }
+.login_wrapper form .input-box{
+    height: 42px;
+    margin:35px 0;
+  }
+
+  form .input-box-message textarea{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    background-color: #ffffffef;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .input-box-message textarea:focus,
+  .input-box textarea:valid{
+    border-color: #4070f4;
+  }
+  
+  .input-box.button input {
+    color: #eaeaea;
+    letter-spacing: 1px;
+    border: none;
+    background: #003566;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+
+  }
+  @media (max-width: 960px) {
+    .contact-body{
+        margin-left: 0;
+    }
+.contact-container{
+    flex-direction: column;
+}
+.contact-left{
+    margin-left: 5%;
+    width: 100%;
+}
+.contact-left h1{
+font-size: 25px;
+margin-bottom: 5%;
+}
+.contact-left p{
+  width: 110%; 
+}
+.contact-right{
+    margin-top: 10%;
+}
+.contact-right h2{
+    font-size: 30px;
+}
+.contact-head img{
+    width: 10%;
+    height: 5%;
+    margin-top: 6%;
+}
+.contact-head{
+    margin-top: 5%;
+}
+  }

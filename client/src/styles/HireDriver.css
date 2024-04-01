@@ -1,0 +1,124 @@
+.hire-driver-modal {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px; 
+    background: linear-gradient(0deg, rgba(128,199,241,1) 16%, rgba(206,229,237,1) 100%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 2px; 
+    right: 30px; 
+    cursor: pointer;
+}
+.close-btn::after {
+    content: '×'; 
+    font-size: 30px;
+    color: rgb(2, 6, 31); 
+  }
+  
+.driver-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px; 
+    
+}
+
+.driver-box {
+    flex: 0 0 calc(28% - 40px); 
+    background-color: #fdfdfde4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.driver-box h3 {
+    margin-top: 0;
+}
+
+.driver-box p {
+    margin: 10px 0;
+}
+
+.driver-box button {
+    padding: 8px 20px;
+    background-color: #16425b;
+    color: #fff;
+    border: none;
+    border-radius: 8%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.driver-box button:hover {
+    background-color: #16425bee;
+}
+
+@media (max-width: 480px) {
+    .hire-driver-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%; 
+        max-width: 400px; 
+        background: linear-gradient(0deg, rgba(128,199,241,1) 16%, rgba(206,229,237,1) 100%);
+        overflow-y: auto;
+        max-height: 80%; 
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 5px; 
+        right: 5px; 
+        cursor: pointer;
+    }
+
+    .close-btn::after {
+        content: '×'; 
+        font-size: 30px;
+        color: rgb(2, 6, 31); 
+    }
+
+    .driver-container {
+        display: flex;
+        flex-direction: column; 
+        margin-top: 10px; 
+    }
+
+    .driver-box {
+        flex: 1 0 auto; 
+        background-color: #fdfdfde4;
+        padding: 20px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .driver-box:last-child {
+        margin-bottom: 0; 
+    }
+  
+}

@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 50px 0 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+}
+
+nav ul li {
+    margin: 1rem 0.2rem;
+
+}
+
+nav ul li a {
+    color: rgb(23, 19, 19);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+nav .logo img {
+    height: 60px;
+    width: 200px;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: rgb(253, 253, 253);
+    background-color: #16425B ;
+    
+}
+
+
+.signup{
+    color: #16425B;
+    border: 3px solid #16425B;
+    padding: 5px;
+}
+
+.login{
+    background-color: #16425B;
+    color: rgb(255, 255, 255);
+}
+nav ul li .login:hover {
+    background-color:#345c72;
+    color: #ffffff;
+}
+.toggle-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 4px;
+    width: 90%;
+    background-color: #16425B;
+    border-radius: 10px;
+}
+
+@media (max-width: 960px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 3rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    }
+    
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
+
+@media (max-width: 480px) {
+    nav {
+        position: relative;
+        width: 100%;
+
+        
+    }
+    
+    .navbar-links {
+        height: auto;
+    }
+    .navbar-links ul{
+        padding: 2rem 3rem;
+    }
+    .navbar-links.active {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+         z-index: 2000;
+         position:fixed;
+        top: 60px;
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        
+    }
+    
+    nav .logo img {
+    height: 40px;
+    width: 140px;
+    margin-left: -40px;    
+   
+}
+    
+
+}

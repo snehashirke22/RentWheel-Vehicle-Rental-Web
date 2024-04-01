@@ -1,0 +1,322 @@
+
+.detail-container{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin-top: 5%;
+    border-radius: 5%;
+}
+.detail-container.blur {
+    filter: blur(5px);
+}
+.vehicles-features{
+    padding: 2%;
+}
+.vehicles-features img{
+margin-top: 2%;
+border-radius: 5%;
+width: 560px;
+height: 300px;
+}
+.vehicles-features h3{
+    margin-top: 4%;
+}
+.vehicles-features h1{
+    color: #3f3f3f;
+}
+.specifications{
+    display: flex;
+    justify-content: space-between;
+}
+.specifications .column p {
+    font-weight: normal; 
+    margin: 0; 
+    margin-top: 4%;
+}
+
+.value {
+    font-weight: bold; 
+    color: #16425B;
+    
+}
+
+.column{
+    flex-basis: 50%;
+    margin-right: 5%;
+    
+}
+.vehicles-features p{
+    color: #16425B;
+    margin-top: 4%;
+    font-size: 17px;
+    font-weight: 500;
+}
+.column2{
+    margin-top: 1%;
+    margin-left: 0%;
+    color: #3f3f3f;
+}
+.column2 .included{
+    background-color: rgba(181, 235, 154, 0.39);
+    padding: 13%;
+    width: 250px;
+    border-radius: 5%;
+    border: 3px solid rgba(0, 128, 0, 0.358);
+}
+.included ul, .excluded ul{
+    margin-top: 4%;
+}
+
+.included p, .excluded p{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+.included li, .excluded li{
+    font-size: 16px;
+}
+
+.column2 .excluded{
+    background-color: rgba(255, 177, 177, 0.256);
+    padding: 13%;
+    width: 250px;
+    margin-top: 4%;
+    border-radius: 5%;
+    border: 3px solid rgba(255, 0, 0, 0.37);
+}
+
+
+.column2 .driver{
+    background-color: rgba(228, 228, 228, 0.76);
+    padding: 7%;
+    width: 240px;
+    margin-top: 4%;
+    font-size: 14px;
+    border-radius: 5%;
+}
+.driver input{
+    color: #eaeaea;
+    border: none;
+    background: #949400;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    padding:4%;
+    margin-top: 4%;
+    border-radius: 5%;
+}
+.driver h3{
+    margin-left: 2%;
+}
+.driver p{
+    margin-top: 4%;
+}
+.reservation-details{
+    margin-left: 0%;
+    padding: 2%;
+    width: 100%;
+}
+.reservation-details h4{
+    text-align: center;
+}
+.reservation{
+    display: flex;
+    margin-top: 2%;
+}
+.booking-details{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3%;
+    color: #3f3f3f;
+    
+}
+.booking-details p{
+    margin-bottom: 9%;
+}
+.date-details{
+    display: flex;
+}
+.date-details p{
+    text-align: center;
+}
+.address-input{
+    margin-right: 8%;
+    margin-top: 8%;
+}
+.address-input textarea{
+    width: 100%;
+    margin-top: 4%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    background-color: #f4f4f4ef;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.address-input .label {
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #000000;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .address-input #phone {
+    width: 80%;
+    height:30px;
+    margin-top: 4%;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    background-color: #f4f4f4ef;
+    border: 1.5px solid #C7BEBE;
+    border-bottom-width: 2.5px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+.pricing-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    
+}
+.pricing-details h3{
+    margin-top: 8%;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3%;
+    color: #3f3f3f;
+}
+.price-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.rent-button {
+    background-color: #16425b;
+    color: rgb(246, 246, 246);
+    border: none;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.rent-button:hover {
+    background-color: #16425bee;
+}
+.note{
+    padding: 6%;
+}
+.note li{
+    margin-top: 2%;
+}
+
+@media (max-width: 768px) {
+    .detail-container {
+        max-width: 100%;
+    }
+}
+
+/* For screens up to 480px */
+@media (max-width: 480px) {
+    .detail-container {
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 0%;
+    }
+    .vehicles-features img {
+        width: 100%;
+        height: auto;
+    }
+    .vehicles-features h1{
+        margin-left: 4%;
+        font-size: 27px;
+    }
+.specifications{
+    flex-direction: column;
+    margin-left: 2%;
+}
+.column {
+    flex-basis: 100%;
+    
+    margin-right: 0;
+}
+.column p{
+    font-size: 15px;
+}
+.column2 {
+        margin-top: 4%;
+        padding: 2%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .column2 .included,
+    .column2 .excluded{
+        padding: 8%;
+     margin: 0 auto;
+        margin-bottom: 10px; 
+    }
+    .column2 .driver {
+        padding: 6%;
+        width: 80%; 
+        margin: 0 auto;
+    }
+
+    .included p,
+    .excluded p {
+        font-size: 16px;
+    }
+
+    .booking-details {
+        font-size: 20px;
+    }
+
+    .reservation-details h4 {
+        font-size: 16px;
+    }
+
+    .address-input,
+    .reservation-details {
+        margin-top: 0%;
+        padding: 6%;
+        font-size: 18px;
+    }
+    .address-input .label{
+        font-size: 18px;
+    }
+    .pricing-details h3{
+        margin-top: 5%;
+      
+    }
+    .rent-button {
+        padding: 9px 10px;
+        font-size: 18px;
+    }
+    .price-item p{
+        font-size: 18px;
+    }
+    .note{
+        padding: 10%;
+        text-align: justify;
+    }
+    .note ul li{
+        margin-top: 7%;
+    }
+}
