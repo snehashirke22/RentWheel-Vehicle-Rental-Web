@@ -43,7 +43,7 @@ const Login = () => {
 
       const { email, password } = formValues;
       try {
-          const res = await fetch('https://vehicle-rental-web.onrender.com/server/auth/login', {
+          const res = await fetch('https://vehicle-rental-web.onrender.com/auth/login', {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"

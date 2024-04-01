@@ -34,12 +34,12 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
-app.use("/server/auth", authRoute);
-app.use("/server/users", usersRoute);
-app.use("/server/vehicles", vehiclesRoute);
-app.use("/server/drivers", driversRoute);
-app.use("/server/stripe", stripeRoute);
-app.use("/server/reservation", reservationRoute);
+app.use("/auth", authRoute);
+app.use("/users", usersRoute);
+app.use("/vehicles", vehiclesRoute);
+app.use("/drivers", driversRoute);
+app.use("/stripe", stripeRoute);
+app.use("/reservation", reservationRoute);
 
 
 // Error handler middleware
