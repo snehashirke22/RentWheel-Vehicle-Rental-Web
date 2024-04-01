@@ -55,7 +55,7 @@ const Register = () => {
 
     const { name, email, password, confirmpassword } = formValues;
     try {
-      const res = await fetch('https://vehicle-rental-web.onrender.com/auth/register', {
+      const res = await fetch('https://vehicle-rental-web.onrender.com/server/auth/register', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
