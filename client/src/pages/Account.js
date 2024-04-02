@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Modal from 'react-modal';
 import '../styles/Account.css'; 
 Modal.setAppElement('#root');
@@ -25,8 +27,10 @@ const Account = () => {
   };
 
   return (
+    <>
+    <Header />
     <div className="account-container">
-      <h1>My Account</h1>
+      <h1>Account Details</h1>
       <div className="card">
       {user && (
         <div className="user-info">
@@ -54,6 +58,8 @@ const Account = () => {
       </Modal>
     </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

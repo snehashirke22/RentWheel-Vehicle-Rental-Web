@@ -17,6 +17,10 @@
   .success-container h1 {
     color: #28a745; 
   }
+    
+  .success-container h2 {
+    color: #4f4f4f; 
+  }
   
   .success-container p {
     color: #333; 

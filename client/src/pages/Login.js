@@ -43,7 +43,7 @@ const Login = () => {
 
       const { email, password } = formValues;
       try {
-          const res = await fetch('https://vehicle-rental-web.onrender.com/auth/login', {
+          const res = await fetch('http://localhost:8000/server/auth/login', {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
@@ -58,10 +58,10 @@ const Login = () => {
           
               const { name, email } = data.user;
               login({ name, email });
-              openLoginModal();
               setTimeout(() => {
-                  closeLoginModal();
-                  navigate('/');
+                openLoginModal();
+                closeLoginModal();
+                navigate('/');
               }, 3000);
           } else {
               setFormErrors('Invalid credentials!');

@@ -32,7 +32,7 @@ const Home = () => {
  const todaysDate = new Date();
  todaysDate.setDate(todaysDate.getDate() + 1);
  const minDateFormatted = todaysDate.toISOString().split('T')[0];
-
+ 
  // Calculate the future date, 30 days from today
   const maxDate = new Date();
   maxDate.setDate(maxDate.getDate() + 30);

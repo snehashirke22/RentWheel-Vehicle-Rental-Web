@@ -14,7 +14,7 @@ const VehicleDetail = () => {
     const [vehicleDetails, setVehicleDetails] = useState(null);
     const initialValues = { pickup: "", return: "" };
     const [addressValues, setAddressValues] = useState(initialValues);
-    const [mobile, setMobile] = useState(initialValues);
+    const [mobile, setMobile] = useState("");
     const [numberOfDays, setNumberOfDays] = useState(1);
     const [driverFee, setDriverFee] = useState(0);
     const [searchData] = useState(location.state || {});
@@ -31,7 +31,7 @@ const VehicleDetail = () => {
         // Fetch vehicle details based on vehicleId
         const fetchVehicleDetails = async () => {
             try {
-                const response = await fetch(`https://vehicle-rental-web.onrender.com/vehicles/${vehicleId}`);
+                const response = await fetch(`http://localhost:8000/server/vehicles/${vehicleId}`);
                 const data = await response.json();
                 setVehicleDetails(data);
             } catch (error) {
@@ -93,12 +93,18 @@ const VehicleDetail = () => {
     };
 
     const makePayment = async () => {
+        if (!mobile || !addressValues.pickup || !addressValues.return) {
+
+            alert("Please fill in all the required fields before proceeding to payment.");
+            return;
+        }
+
         const stripe = await loadStripe("pk_test_51OIslJSF708w9jZl2zXYhOZ2YdO712iJXCw64x23mRa2Ga7AsJLKQNglyOjUuXtlUtfwRqxzQumFC7sj3wBc6YyY00VwMJ8rDV");
     
     
         const reservationBody = {
-            userId: user._id, 
             vehicleId: vehicleDetails._id, 
+            userId: user._id, 
             mobile: mobile, 
             pickup_address: addressValues.pickup,
             return_address: addressValues.return,
@@ -118,14 +124,14 @@ const VehicleDetail = () => {
         };
     
         try {
-            const sessionResponse = await fetch("https://vehicle-rental-web.onrender.com/stripe/create-checkout-session", {
+            const sessionResponse = await fetch("http://localhost:8000/server/stripe/create-checkout-session", {
                 method: "POST",
                 headers: headers,
                 body: JSON.stringify(sessionBody)
             });
     
             if (!sessionResponse.ok) {
-                throw new Error(`Failed to create checkout session: ${sessionResponse.statusText}`);
+                throw new Error(`Failed to create checkout session: ${sessionResponse.status}`);
             }
     
             const session = await sessionResponse.json();
@@ -136,7 +142,7 @@ const VehicleDetail = () => {
             if (result.error) {
                 console.error('Stripe redirect error:', result.error);
             } else {
-                const reservationResponse = await fetch("https://vehicle-rental-web.onrender.com/reservation", {
+                const reservationResponse = await fetch("http://localhost:8000/server/reservation", {
                     method: "POST",
                     headers: headers,
                     body: JSON.stringify(reservationBody)
@@ -157,6 +163,7 @@ const VehicleDetail = () => {
     };
     
 
+    
     
     return (
         <>
@@ -220,18 +227,18 @@ const VehicleDetail = () => {
                     </div>
 
                     <div className="address-input" >
-                  <label className='label'>Mobile Number</label>&nbsp;&nbsp;
+                  <label className='label'>Mobile Number*</label>&nbsp;&nbsp;
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    value={mobile.name}
-                    onChange={handleChange}
+                    value={mobile}
+                    onChange={(event) => setMobile(event.target.value)}
                     required
                   />
                 </div>
                     <div className="address-input">
-                        <label className='label'>Pickup Address</label><br />
+                        <label className='label'>Pickup Address*</label><br />
                         <textarea
                             id="pickup"
                             name="pickup"
@@ -243,7 +250,7 @@ const VehicleDetail = () => {
                         />
                     </div>
                     <div className="address-input">
-                        <label className='label'>Return Address</label><br />
+                        <label className='label'>Return Address*</label><br />
                         <textarea
                             id="return"
                             name="return"
