@@ -14,7 +14,7 @@ const app = express();
 
 app.use(cors({
     credentials: true, 
-    origin: 'https://rentwheel-ecyw.onrender.com', 
+    origin: 'http://localhost:3000', 
 }));
 
 // Configuring ENV files and connection files
@@ -34,12 +34,12 @@ app.use(cookieParser());
 app.use(express.json());
 
 // Routes
-app.use("/auth", authRoute);
-app.use("/users", usersRoute);
-app.use("/vehicles", vehiclesRoute);
-app.use("/drivers", driversRoute);
-app.use("/stripe", stripeRoute);
-app.use("/reservation", reservationRoute);
+app.use("/server/auth", authRoute);
+app.use("/server/users", usersRoute);
+app.use("/server/vehicles", vehiclesRoute);
+app.use("/server/drivers", driversRoute);
+app.use("/server/stripe", stripeRoute);
+app.use("/server/reservation", reservationRoute);
 
 
 // Error handler middleware

@@ -7,36 +7,49 @@ import Contact from './pages/Contact';
 import SearchRental from './pages/SearchRental';
 import OfferVehicle from './pages/OfferVehicle';
 import VehicleDetail from './pages/VehicleDetail';
-import Account from './pages/Account';
 import Success from './pages/Success';
 import Cancel from './pages/Cancel';
+import Account from './pages/Account';
 import React from 'react';
 import { useAuth } from './context/AuthContext';
-import { BrowserRouter, Routes, Route , Navigate} from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
   const { user } = useAuth();
-  
+
   return (
-    <>
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={!user ? <Login /> : <Navigate to="/" />} />
-        <Route path="/register" element={!user ? <Register /> : <Navigate to="/" />} />
-        <Route path="/searchrental" element={user ? <SearchRental /> : <Navigate to="/login" />} />
-            <Route exact path='/offervehicle' element={<OfferVehicle/>}/>
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/account" element={<Account />} />
-            <Route path="/vehicledetail/:vehicleId" element={<VehicleDetail />} />
-            <Route path="/success" element={<Success />} />
-            <Route path="/cancel" element={<Cancel />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          {/* Public routes accessible to everyone */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/offervehicle" element={<OfferVehicle />} />
+          <Route path="/vehicledetail/:vehicleId" element={<VehicleDetail />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/cancel" element={<Cancel />} />
+
+          {/* Routes that require authentication */}
+          <Route
+            path="/login"
+            element={!user ? <Login /> : <Navigate to="/" replace />}
+          />
+          <Route
+            path="/register"
+            element={!user ? <Register /> : <Navigate to="/" replace />}
+          />
+          <Route
+            path="/searchrental"
+            element={user ? <SearchRental /> : <Navigate to="/login" replace />}
+          />
+          <Route
+            path="/account"
+            element={user ? <Account /> : <Navigate to="/login" replace />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
