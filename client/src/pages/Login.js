@@ -55,7 +55,6 @@ const Login = () => {
           if (res.ok) {
               const data = await res.json();
               console.log(data);
-          
               const { name, email } = data.user;
               login({ name, email });
               setTimeout(() => {
@@ -133,7 +132,7 @@ const Login = () => {
                     InputProps={{
                       endAdornment: (
                         <InputAdornment position="end">
-                          <IconButton
+                          <IconButton 
                             onClick={handleTogglePasswordVisibility}
                             edge="end"
                           >
@@ -147,7 +146,7 @@ const Login = () => {
 
                 <div className='remember'>
                   <input type="checkbox" />
-                  <label>  Remember me</label>
+                  <label>Remember me</label>
                   <Link to="/forgotpassword" className='forgot'> forgot passsword ?</Link>
                 </div>
 

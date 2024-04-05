@@ -13,6 +13,8 @@ import Account from './pages/Account';
 import React from 'react';
 import { useAuth } from './context/AuthContext';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 
 function App() {
   const { user } = useAuth();
@@ -21,17 +23,17 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          {/* Public routes accessible to everyone */}
-          <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/offervehicle" element={<OfferVehicle />} />
           <Route path="/vehicledetail/:vehicleId" element={<VehicleDetail />} />
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/resetpassword" element={<ResetPassword />} />
 
-          {/* Routes that require authentication */}
-          <Route
+            <Route
             path="/login"
             element={!user ? <Login /> : <Navigate to="/" replace />}
           />

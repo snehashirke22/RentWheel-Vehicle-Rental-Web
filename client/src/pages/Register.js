@@ -72,7 +72,7 @@ const Register = () => {
         const responseData = await res.json();
         console.error(`Registration failed with status ${res.status}`);
         if (res.status === 400 && responseData.message === 'Email already exists') {
-          setFormErrors({ email: 'Email is already used. Please use another email address' });
+          setFormErrors({ email: 'This Email is already used. Please use another email address' });
         }}
     } catch(error) {
       console.log(error);
@@ -161,6 +161,7 @@ const Register = () => {
                     required
                   />
                 </div>
+                {formErrors.email && <p style={{ color: "red", fontSize: "12px" }}>{formErrors.email}</p>}
                
                 <div className="input-box">
                   <label className='label'>Password</label>
