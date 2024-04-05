@@ -7,11 +7,14 @@ import vehiclesRoute from "./routes/vehicles.js";
 import driversRoute from "./routes/drivers.js";
 import stripeRoute from "./routes/stripe.js";
 import reservationRoute from "./routes/reservation.js";
+import forgotPasswordRoute from "./routes/forgotpassword.js";
+import resetpasswordRoute from "./routes/resetpassword.js";
 import cookieParser from "cookie-parser";
+import bodyParser from "body-parser";
 import cors from "cors";
 
 const app = express();
-
+app.use(bodyParser.json());
 app.use(cors({
     credentials: true, 
     origin: 'http://localhost:3000', 
@@ -40,6 +43,8 @@ app.use("/server/vehicles", vehiclesRoute);
 app.use("/server/drivers", driversRoute);
 app.use("/server/stripe", stripeRoute);
 app.use("/server/reservation", reservationRoute);
+app.use('/server/auth/forgotpassword', forgotPasswordRoute);
+app.use('/server/auth/resetpassword', resetpasswordRoute);
 
 
 // Error handler middleware

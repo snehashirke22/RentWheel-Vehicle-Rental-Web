@@ -5,8 +5,8 @@ const ReservationSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         required: true
     },
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
+    useremail: {
+        type: String,
         required: true
     },
     mobile: {
